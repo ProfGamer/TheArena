@@ -1,11 +1,7 @@
 res://scenes/ui/main_menu.tscn
 res://resources/theme/theme.tres
 res://scenes/autoload/screen_transition.gdshader
-res://scenes/component/hit_flash_component.gdshader
-res://scenes/ui/vignette.gdshader
 res://resources/tileset.tres
-res://scenes/manager/upgrade_manager.gd
-res://scenes/manager/upgrade_manager.tscn
-res://scenes/game_object/player/player.tscn
-res://scenes/manager/enemy_manager.tscn
-res://scenes/manager/enemy_manager.gd
+res://scenes/ui/vignette.gdshader
+res://scenes/component/hit_flash_component.gdshader
+res://scenes/ui/main_menu.gd
