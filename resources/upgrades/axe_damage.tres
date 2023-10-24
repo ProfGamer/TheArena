@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=2 format=3 uid="uid://bpcods6scgd8j"]
+
+[ext_resource type="Script" path="res://resources/upgrades/ability_upgrade.gd" id="1_tdlgp"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_tdlgp")
+id = "axe_damage"
+uuid = 4
+max_quantity = 0
+name = "裂骨重击"
+description = "毁灭性力量的象征, 增加飞斧伤害
+飞斧伤害增强10%"

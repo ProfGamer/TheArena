@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=2 format=3 uid="uid://c2cws3lbsxqrc"]
+
+[ext_resource type="Script" path="res://resources/upgrades/ability_upgrade.gd" id="1_v402b"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_v402b")
+id = "axe_range"
+uuid = 7
+rare = 0
+max_quantity = 3
+name = "狂野横扫"
+description = "扩大飞斧旋转范围
+飞斧旋转半径增加20"

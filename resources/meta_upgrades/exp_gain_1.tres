@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="MetaUpgrade" load_steps=2 format=3 uid="uid://hjswbifpcuwh"]
+
+[ext_resource type="Script" path="res://resources/meta_upgrades/meta_upgrade.gd" id="1_qjndk"]
+
+[resource]
+script = ExtResource("1_qjndk")
+id = "exp_gain_1"
+max_quantity = 1
+rare = 0
+exp_cost = 100
+title = "小镇做题家"
+description = "努力学习
+增加10%经验值掉落几率"

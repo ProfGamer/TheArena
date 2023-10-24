@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="MetaUpgrade" load_steps=2 format=3 uid="uid://cvcfw5613mj5u"]
+
+[ext_resource type="Script" path="res://resources/meta_upgrades/meta_upgrade.gd" id="1_44ne7"]
+
+[resource]
+script = ExtResource("1_44ne7")
+id = "exp_gain_3"
+max_quantity = 1
+rare = 2
+exp_cost = 1000
+title = "终身学习"
+description = "你参悟了学习的真谛
+增加30%经验值掉落几率"

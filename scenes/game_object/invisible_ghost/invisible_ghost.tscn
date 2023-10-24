@@ -1,0 +1,72 @@
+[gd_scene load_steps=19 format=3 uid="uid://chph5c5rl7pcy"]
+
+[ext_resource type="Script" path="res://scenes/game_object/invisible_ghost/invisible_ghost.gd" id="1_328u5"]
+[ext_resource type="PackedScene" uid="uid://bjk34x5hlmisu" path="res://scenes/component/heath_component.tscn" id="2_7bltw"]
+[ext_resource type="PackedScene" uid="uid://bsqwfcsdhbhyj" path="res://scenes/component/death_component.tscn" id="3_rb1to"]
+[ext_resource type="PackedScene" uid="uid://cijlyalq0icft" path="res://scenes/component/velocity_component.tscn" id="4_pkkf0"]
+[ext_resource type="PackedScene" uid="uid://7rqyi7akw2vb" path="res://scenes/component/hit_flash_component.tscn" id="5_jaf3b"]
+[ext_resource type="PackedScene" uid="uid://bm4ynbafhn3op" path="res://scenes/component/hurtbox_component.tscn" id="5_nh5x6"]
+[ext_resource type="Texture2D" uid="uid://buy16d7puftlq" path="res://scenes/game_object/invisible_ghost/invisible_ghost.png" id="6_8cyak"]
+[ext_resource type="Shader" path="res://scenes/component/hit_flash_component.gdshader" id="6_lkt2r"]
+[ext_resource type="PackedScene" uid="uid://dwvu87xqtgvoo" path="res://scenes/component/vial_drop_component.tscn" id="7_krbky"]
+[ext_resource type="PackedScene" uid="uid://srsbxt03k5mr" path="res://scenes/component/random_stream_player_2d_component.tscn" id="10_3ov81"]
+[ext_resource type="AudioStream" uid="uid://2tpewpr5014e" path="res://assets/audio/footstep_carpet_000.ogg" id="11_e8est"]
+[ext_resource type="AudioStream" uid="uid://bnssm0nnjscdq" path="res://assets/audio/footstep_carpet_001.ogg" id="12_ootly"]
+[ext_resource type="AudioStream" uid="uid://bjjiwla8qty6d" path="res://assets/audio/footstep_carpet_002.ogg" id="13_byosr"]
+[ext_resource type="AudioStream" uid="uid://bto8sj2jkrdn2" path="res://assets/audio/footstep_carpet_003.ogg" id="14_8efe8"]
+[ext_resource type="AudioStream" uid="uid://by06ntjlfgxae" path="res://assets/audio/footstep_carpet_004.ogg" id="15_rkq65"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fq7a4"]
+resource_local_to_scene = true
+shader = ExtResource("6_lkt2r")
+shader_parameter/lerp_percent = 0.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hscap"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oa51r"]
+radius = 4.0
+
+[node name="InvisibleGhost" type="CharacterBody2D" groups=["enemy"]]
+collision_layer = 8
+collision_mask = 9
+script = ExtResource("1_328u5")
+
+[node name="HealthComponent" parent="." instance=ExtResource("2_7bltw")]
+max_heath = 25.0
+
+[node name="DeathComponent" parent="." node_paths=PackedStringArray("health_component", "sprite") instance=ExtResource("3_rb1to")]
+health_component = NodePath("../HealthComponent")
+sprite = NodePath("../Visual/Sprite2D")
+
+[node name="VelocityComponent" parent="." instance=ExtResource("4_pkkf0")]
+max_speed = 80
+acceleration = 1.0
+
+[node name="HitFlashComponent" parent="." node_paths=PackedStringArray("health_component", "sprite") instance=ExtResource("5_jaf3b")]
+health_component = NodePath("../HealthComponent")
+sprite = NodePath("../Visual/Sprite2D")
+hit_flash_material = SubResource("ShaderMaterial_fq7a4")
+
+[node name="VialDropComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("7_krbky")]
+drop_percent = 0.6
+health_component = NodePath("../HealthComponent")
+
+[node name="HurtboxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("5_nh5x6")]
+health_component = NodePath("../HealthComponent")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtboxComponent"]
+position = Vector2(0, -7)
+shape = SubResource("CircleShape2D_hscap")
+
+[node name="Visual" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Visual"]
+position = Vector2(0, -8)
+texture = ExtResource("6_8cyak")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -4)
+shape = SubResource("CircleShape2D_oa51r")
+
+[node name="RandomStreamPlayer2DComponent" parent="." instance=ExtResource("10_3ov81")]
+streams = Array[AudioStream]([ExtResource("11_e8est"), ExtResource("12_ootly"), ExtResource("13_byosr"), ExtResource("14_8efe8"), ExtResource("15_rkq65")])

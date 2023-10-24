@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=2 format=3 uid="uid://c3koo7alhqgg8"]
+
+[ext_resource type="Script" path="res://resources/upgrades/ability_upgrade.gd" id="1_oownu"]
+
+[resource]
+script = ExtResource("1_oownu")
+id = "sword_triple"
+uuid = 11
+rare = 2
+max_quantity = 1
+name = "三千世界"
+description = "短暂领悟三千大道
+20%概率触发三刀流"

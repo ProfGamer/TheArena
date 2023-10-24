@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=2 format=3 uid="uid://10w5gxd3wvxi"]
+
+[ext_resource type="Script" path="res://resources/upgrades/ability_upgrade.gd" id="1_b6uuc"]
+
+[resource]
+script = ExtResource("1_b6uuc")
+id = "sword_base_up"
+uuid = 12
+rare = 0
+max_quantity = 0
+name = "剑术练习"
+description = "踏踏实实修炼剑术
+剑基础伤害+1"

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=2 format=3 uid="uid://4bdv7xpfewe6"]
+
+[ext_resource type="Script" path="res://resources/upgrades/ability_upgrade.gd" id="1_2a7ya"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_2a7ya")
+id = "axe_execute"
+uuid = 10
+rare = 2
+max_quantity = 1
+name = "斩杀"
+description = "未知与毁灭共存
+飞斧有5%几率直接斩杀敌人"

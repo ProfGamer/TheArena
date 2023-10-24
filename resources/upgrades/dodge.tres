@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=2 format=3 uid="uid://d1g1cvh8h0p86"]
+
+[ext_resource type="Script" path="res://resources/upgrades/ability_upgrade.gd" id="1_f8i4e"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_f8i4e")
+id = "dodge"
+uuid = 9
+rare = 1
+max_quantity = 1
+name = "闪避"
+description = "20%概率闪避攻击"

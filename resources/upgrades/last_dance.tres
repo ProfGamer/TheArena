@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=2 format=3 uid="uid://8ootkcq2vxv4"]
+
+[ext_resource type="Script" path="res://resources/upgrades/ability_upgrade.gd" id="1_05vvj"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_05vvj")
+id = "last_dance"
+uuid = 8
+rare = 2
+max_quantity = 1
+name = "最后一舞"
+description = "燃尽所有生命力以爆发全部潜能
+基础移动速度提升100%
+生命值降低至1"

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="MetaUpgrade" load_steps=2 format=3 uid="uid://diqoh882xv1of"]
+
+[ext_resource type="Script" path="res://resources/meta_upgrades/meta_upgrade.gd" id="1_wjyxy"]
+
+[resource]
+script = ExtResource("1_wjyxy")
+id = "exp_gain_2"
+max_quantity = 1
+rare = 1
+exp_cost = 500
+title = "我的大学"
+description = "你考上了大学
+增加20%经验值掉落几率"

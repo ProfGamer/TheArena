@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="MetaUpgrade" load_steps=2 format=3 uid="uid://b0yupt74u51ax"]
+
+[ext_resource type="Script" path="res://resources/meta_upgrades/meta_upgrade.gd" id="1_067lt"]
+
+[resource]
+script = ExtResource("1_067lt")
+id = "sword_damage_up"
+max_quantity = 10
+rare = 0
+exp_cost = 50
+title = "剑术精通"
+description = "修习剑术
+挥剑攻击基础伤害+1"
