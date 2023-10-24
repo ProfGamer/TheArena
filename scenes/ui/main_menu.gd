@@ -25,6 +25,7 @@ func on_options_pressed():
 	var options_instance = options_scene.instantiate()
 	add_child(options_instance)
 	options_instance.back_pressed.connect(on_options_closed.bind(options_instance))
+	print("从MainMenu跳转至OptionsMenu")
 
 
 func on_quit_pressed():
