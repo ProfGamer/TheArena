@@ -1,7 +1,7 @@
-res://scenes/ui/main_menu.tscn
+res://scenes/ability/sword_ability_controller/sword_ability_controller.tscn
 res://resources/theme/theme.tres
 res://scenes/autoload/screen_transition.gdshader
-res://resources/tileset.tres
 res://scenes/ui/vignette.gdshader
+res://resources/tileset.tres
 res://scenes/component/hit_flash_component.gdshader
-res://scenes/ui/main_menu.gd
+res://scenes/ability/sword_ability_controller/sword_ability_controller.gd
